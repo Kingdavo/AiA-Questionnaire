@@ -1,1 +1,3 @@
 # AiA-Questionnaire
+This is the first draft/sketch of the AiA Questionnaire to be hosted on Netlify. The goal is to come up with our own unique idea and up our game...
+Edits to be made include: being able to store the data collected using gmail(Probably the LCVP MKT's email address or any provided email address)
