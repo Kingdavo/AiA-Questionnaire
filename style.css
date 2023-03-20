@@ -8,9 +8,11 @@
 body {
   font-family: "Lato";
   text-align: center;
-background-image: linear-gradient(rgba(3, 126, 243, 0.3),
-            rgba(3, 126, 243, 0.6)),
-        url(IMG_5187.jpg);
+  background-image: linear-gradient(
+      rgba(3, 126, 243, 0.3),
+      rgba(3, 126, 243, 0.6)
+    ),
+    url(IMG_5187.jpg);
 }
 
 header {
@@ -26,7 +28,7 @@ header p {
 
 .survey {
   width: 50%;
-  height: 100vh auto;
+  height: 100vh;
   margin: 30px auto;
   background: #caccd1;
   color: #fff;
@@ -35,6 +37,44 @@ header p {
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
 
+/* form {
+  background: #caccd1;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 30px;
+}
+form h3 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+  
+}
+
+form input {
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #f3f4f7;
+  font-size: 14px;
+
+}
+
+form button {
+  padding: 15px;
+  background: #037ef3;
+  color: #000;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: auto;
+  margin: 20px auto 0;
+  border-radius: 12px;
+/* }  */
 .survey h3 {
   margin: 1px;
   padding-top: 2px;
@@ -46,14 +86,14 @@ header p {
   cursor: auto;
   width: 50%;
   border-radius: 10px;
-}
+} 
 
 button {
   background-color: #037ef3;
   color: white;
   font-weight: 400;
-  padding: 8px;
-  width: 50%;
+  padding: 5px;
+  width: auto;
   margin: 10px 0;
   border-radius: 10px;
   border: 0;
@@ -61,7 +101,11 @@ button {
     text-align: center; */
 }
 
-button .submit-Btn :hover {
-  color: rgba(12, 185, 193, 0.5);
-  cursor: pointer;
+button a {
+  text-decoration: none;
+}
+
+button :hover {
+  background: #caccd1;
+  color: #037ef3;
 }

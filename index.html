@@ -31,33 +31,59 @@
     </header>
 
     <div class="survey">
-      <div class="name">
-        <h3>What do we call you?</h3>
-        <i class="fa-solid fa-user"></i>
-        <input
-          type="text"
-          placeholder="What's your full name, please?"
-          required
-        />
-      </div>
+      <form onsubmit=" sendEmail(); reset(); return false;">
+        <div class="name">
+          <h3>What do we call you?</h3>
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="text"
+            placeholder="What's your full name, please?"
+            required
+            id="name"
+          />
+        </div>
 
-      <div class="contact-info">
-        <h3>How do we communicate with you?</h3>
-        <i class="fa-solid fa-envelope"></i>
-        <input
-          type="email"
-          placeholder="Enter your email address, please?"
-          required
-        />
-      </div>
+        <div class="contact-info">
+          <h3>How do we communicate with you?</h3>
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Enter your email address, please?"
+            required
+            id="email"
+          />
+        </div>
 
-      <div class="contact-info-2">
-        <h3>Can we call you sometime? Or send a text even.</h3>
-        <i class="fa-solid fa-phone"></i>
-        <input type="tel" placeholder="Please enter your phone number." />
-      </div>
+        <div class="contact-info-2">
+          <h3>Can we call you sometime? Or send a text even.</h3>
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" placeholder="Please enter your phone number." />
+        </div>
 
-      <button type="submit" class="submit-Btn">Let's Keep Walking</button>
+        <button type="submit" class="submit-Btn">
+          <a href="">Let's Keep Walking</a>
+        </button>
+      </form>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "emailaddress",
+          Password: "password",
+          To: "receipient email address",
+          From: document.getElementById("email").value,
+          Subject: "New Contact Info",
+          Body:
+            "Name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementsByClassName("contact-info").value +
+            "<br> Phone No.: " +
+            document.getElementByClass("contact-info-2").value,
+        }).then((message) => alert("Thank You"));
+      }
+    </script>
   </body>
 </html>
